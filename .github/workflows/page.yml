@@ -26,6 +26,7 @@ jobs:
           node-version: 16
           cache: 'yarn'
       - run: yarn
+      - run: yarn --cwd packages/ui install
       - run: yarn --cwd packages/ui build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
